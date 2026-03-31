@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina | Modern Premium Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Elegant Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">Lumina.</div>
+        <div class="nav-links">
+            <a href="#hero" class="active">Home</a>
+            <a href="#featured">Featured</a>
+            <a href="#full-menu">Discover Menu</a>
+            <a href="#about">Our Story</a>
+            <a href="#reservations">Reservations</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+            <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" class="active"><path fill="currentColor" d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+            <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="4" fill="currentColor"/><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+        <!-- Mobile Menu Hamburger -->
+        <div class="hamburger"><span></span><span></span><span></span></div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <header class="hero section-scroll fade-up" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="subtitle">Welcome to Lumina Cafe</p>
+            <h1>A Taste of the<br><span>Extraordinary</span></h1>
+            <div class="hero-btns">
+                <a href="#full-menu" class="btn">View Catalog</a>
+                <a href="#reservations" class="btn outline">Book a Table</a>
+            </div>
+            <div class="scroll-indicator">
+                <span>SCROLL TO DISCOVER</span>
+                <div class="line-down"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Featured Drinks Section (Timeline Layout) -->
+    <section class="timeline-wrapper section-scroll" id="featured">
+        <div class="section-title fade-up">
+            <h2>Signature Creations</h2>
+            <p>Our most meticulously crafted offerings.</p>
+        </div>
+
+        <svg id="timeline-svg">
+            <path id="connection-path" fill="none" stroke="var(--gold)" stroke-width="1.5"></path>
+        </svg>
+
+        <div class="menu-container">
+            <!-- Item 1 -->
+            <div class="timeline-item align-left fade-up">
+                <div class="dish-graphic">
+                    <img src="assets/topdown_latte.png" alt="Espresso Roast" class="dish-img">
+                    <div class="tag" style="top: 50%; left: -60px; transform: translateY(-50%);">$4.50</div>
+                </div>
+                <div class="dish-info">
+                    <div class="connector-dot"></div>
+                    <h2>Espresso<br><span>dark roast</span></h2>
+                    <div class="card">
+                        <p>Our signature dark roast with notes of cocoa and toasted caramel, extracted to perfection.</p>
+                        <a href="#full-menu" class="catalog-link">view catalog <span class="dot"></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item align-right fade-up">
+                <div class="dish-info">
+                    <div class="connector-dot"></div>
+                    <h2>Matcha<br><span>with oat milk</span></h2>
+                    <div class="card">
+                        <p>Experience ceremonial grade matcha whisked to perfection. A calming and earthy alternative.</p>
+                        <a href="#full-menu" class="catalog-link">view catalog <span class="dot"></span></a>
+                    </div>
+                </div>
+                <div class="dish-graphic">
+                    <img src="assets/topdown_matcha.png" alt="Matcha" class="dish-img">
+                    <div class="tag" style="top: 50%; right: -60px; transform: translateY(-50%);">$6.00</div>
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item align-left fade-up">
+                 <div class="dish-graphic">
+                    <img src="assets/matcha_latte.png" alt="Acai Bowl" class="dish-img" style="object-position: center bottom;">
+                    <div class="tag" style="top: 50%; left: -60px; transform: translateY(-50%);">$11.50</div>
+                </div>
+                <div class="dish-info">
+                    <div class="connector-dot"></div>
+                    <h2>Acai<br><span>super bowl</span></h2>
+                    <div class="card">
+                        <p>A refreshing blend of organic fruits topped with toasted coconut, berries, and a honey drizzle.</p>
+                        <a href="#full-menu" class="catalog-link">view catalog <span class="dot"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Today's Special Banner -->
+    <section class="special-banner section-scroll fade-up" id="special">
+        <div class="special-content">
+            <h3>Today's Special</h3>
+            <h2>Caramel Latte – 20% OFF</h2>
+            <p>Treat yourself to our house-made caramel syrup blended with our signature espresso. Available until 4 PM.</p>
+            <a href="#full-menu" class="btn">Claim Offer</a>
+        </div>
+    </section>
+
+    <!-- 3. Full Menu Section -->
+    <section class="full-menu section-scroll" id="full-menu">
+        <div class="section-title fade-up">
+            <h2>The Full Menu</h2>
+            <p>A symphony of robust flavors and delicate notes.</p>
+        </div>
+
+        <div class="menu-grid">
+            <!-- Col 1 -->
+            <div class="menu-col fade-up">
+                <div class="menu-category">
+                    <h3>Coffee</h3>
+                    <div class="menu-item-text">
+                        <div class="item-name">Americano <p>Hot or iced dark roast</p></div>
+                        <div class="dots"></div><span class="price">$3.50</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Cappuccino <p>Espresso with velvety milk foam</p></div>
+                        <div class="dots"></div><span class="price">$4.50</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Caramel Latte <p>Signature espresso, caramel, steamed milk</p></div>
+                        <div class="dots"></div><span class="price">$5.50</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Pour Over <p>Single origin rotating beans</p></div>
+                        <div class="dots"></div><span class="price">$6.00</span>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3>Desserts</h3>
+                    <div class="menu-item-text">
+                        <div class="item-name">Tiramisu <p>Classic Italian coffee dessert</p></div>
+                        <div class="dots"></div><span class="price">$8.00</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Matcha Cheesecake <p>Creamy, earthy, and rich</p></div>
+                        <div class="dots"></div><span class="price">$7.50</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="menu-col fade-up delay-1">
+                <div class="menu-category">
+                    <h3>Cold Drinks</h3>
+                    <div class="menu-item-text">
+                        <div class="item-name">Iced Matcha Latte <p>Ceremonial grade, choice of milk</p></div>
+                        <div class="dots"></div><span class="price">$6.50</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Cold Brew <p>Steeped for 24 hours</p></div>
+                        <div class="dots"></div><span class="price">$5.00</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Artisan Lemonade <p>House-made with fresh mint</p></div>
+                        <div class="dots"></div><span class="price">$4.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-category">
+                    <h3>Snacks</h3>
+                    <div class="menu-item-text">
+                        <div class="item-name">Butter Croissant <p>Flaky and warm, baked daily</p></div>
+                        <div class="dots"></div><span class="price">$4.00</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Acai Bowl <p>Berries, granola, toasted coconut</p></div>
+                        <div class="dots"></div><span class="price">$11.50</span>
+                    </div>
+                    <div class="menu-item-text">
+                        <div class="item-name">Avocado Toast <p>Sourdough, microgreens, chili flakes</p></div>
+                        <div class="dots"></div><span class="price">$9.50</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. About Us Section -->
+    <section class="about-section section-scroll" id="about">
+        <div class="about-container fade-up">
+            <div class="about-img-wrap">
+                <img src="assets/cafe_interior.png" alt="Lumina Cafe Interior" class="about-img">
+            </div>
+            <div class="about-text">
+                <p class="subtitle" style="margin-bottom: 10px;">Our Story</p>
+                <h2>Crafted with Passion.</h2>
+                <p>Lumina was created to bring people together through exceptional coffee, cozy ambience, and memorable moments.</p>
+                <p>We source our beans directly from sustainable farms across the globe, ensuring every cup not only tastes extraordinary but supports the communities that curate them. Step into our minimalist sanctuary and let the world fade away.</p>
+                <img src="assets/aesthetic_pastry.png" height="150" style="border-radius:12px; margin-top:20px; object-fit:cover; width: 250px;" alt="Pastry">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Gallery Section -->
+    <section class="gallery-section section-scroll" id="gallery">
+        <div class="section-title fade-up">
+            <h2>The Lumina Experience</h2>
+            <p>Catch a glimpse of the aesthetic.</p>
+        </div>
+        <div class="instagram-grid fade-up">
+            <!-- Using our assets and a few curated unsplash placeholders -->
+            <img src="assets/topdown_latte.png" alt="Latte Art" class="grid-img">
+            <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=600&q=80" alt="Cafe Exterior" class="grid-img">
+            <img src="assets/aesthetic_pastry.png" alt="Pastry" class="grid-img col-span-2">
+            <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80" alt="Beautiful Pour" class="grid-img">
+            <img src="assets/topdown_matcha.png" alt="Matcha" class="grid-img">
+        </div>
+    </section>
+
+    <!-- 6. Customer Reviews -->
+    <section class="reviews-section section-scroll fade-up" id="reviews">
+        <div class="section-title">
+            <h2>Whispers of Praise</h2>
+        </div>
+        <div class="reviews-container">
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Amazing coffee and beautiful ambience. The Matcha Latte is the absolute best I've ever had in this city."</p>
+                <p class="author">— Sarah Jenkins</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"Lumina isn't just a cafe; it's a sanctuary. The aesthetic is incredibly premium, and the staff are wonderful."</p>
+                <p class="author">— Marcus T.</p>
+            </div>
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p>"The dark roast espresso is phenomenal. Perfectly extracted, totally smooth, and an incredible atmosphere."</p>
+                <p class="author">— Elena R.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Reservation Section -->
+    <section class="reservation-section section-scroll" id="reservations">
+        <div class="res-container fade-up">
+            <div class="res-text">
+                <h2>Reserve a Table</h2>
+                <p>Secure your spot in our aesthetic haven. Whether it's a quiet morning to work or an evening meeting with friends, Lumina awaits.</p>
+            </div>
+            <div class="res-form-wrapper">
+                <form id="reservation-form" class="premium-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" placeholder="Email Address" required>
+                        <select required>
+                            <option value="" disabled selected>Number of Guests</option>
+                            <option value="1">1 Person</option>
+                            <option value="2">2 People</option>
+                            <option value="3">3 People</option>
+                            <option value="4">4 People</option>
+                            <option value="5+">5+ People (Group)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <input type="date" required>
+                        <input type="time" required>
+                    </div>
+                    <div class="form-row">
+                        <textarea placeholder="Special Requests (Optional)" rows="2"></textarea>
+                    </div>
+                    <button type="submit" class="btn full-width">Confirm Reservation</button>
+                    <!-- Success Message Hidden initially -->
+                    <div id="res-success" class="success-msg hidden">
+                        ✓ Reservation Confirmed! We look forward to seeing you.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Newsletter Section -->
+    <section class="newsletter-section section-scroll fade-up" id="contact">
+        <div class="news-container">
+            <h2>Join our coffee lovers club</h2>
+            <p>Subscribe to receive updates on new roasts, special pastries, and exclusive events.</p>
+            <form id="news-form" class="news-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn prm">Subscribe</button>
+            </form>
+            <div id="news-success" class="success-msg hidden">✓ Welcome to the club!</div>
+        </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo">Lumina.</div>
+                <p class="footer-desc">Experience the extraordinary in every sip. An aesthetic coffee journey.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Visit Us</h4>
+                <p>123 Aesthetic Avenue<br>Metropolitan District, NY 10001</p>
+                <p class="hours"><strong>Hours:</strong> 7:00 AM – 10:00 PM (Daily)</p>
+            </div>
+
+            <div class="footer-socials">
+                <h4>Follow Us</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Pinterest</a>
+                <a href="#">Twitter</a>
+            </div>
+
+            <div class="footer-map">
+                <!-- Google Maps Custom Embed Box Design -->
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.25279998136!2d-74.14448770243419!3d40.69763123338383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lumina Cafe. All rights reserved.</p>
+            <p class="credit">Designed & Developed by Antigravity</p>
+        </div>
+    </footer>
+
+    <!-- GSAP added for the SVG timeline path plotting -->
+    <script src="script.js"></script>
+</body>
+</html>
